@@ -83,7 +83,7 @@ public class IconSetsFragment extends Fragment {
         iconSetsFragmentBinding.rvIconSetId.addOnScrollListener(new PaginationScrollListener(linearLayoutManager) {
             @Override
             protected void loadMoreItems() {
-                //iconSetsAdapter.clear();
+               // //iconSetsAdapter.clear();
                 if (currentPage < TOTAL_PAGES) {
                     isLoading = true;
                     currentPage += 1;

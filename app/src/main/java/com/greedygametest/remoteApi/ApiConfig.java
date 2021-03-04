@@ -11,7 +11,6 @@ public class ApiConfig {
 
     public static String BASE_URL = "https://api.iconfinder.com/v4/";
 
-
     public static OkHttpClient okHttpClient = new OkHttpClient.Builder()
             .connectTimeout(1, TimeUnit.MINUTES)
             .readTimeout(30, TimeUnit.SECONDS)
@@ -26,22 +25,6 @@ public class ApiConfig {
                 .addConverterFactory(GsonConverterFactory.create()).build();
     }
 
-    public static Retrofit getRetrofitScalars()
-    {
-        return new Retrofit.Builder().baseUrl(BASE_URL)
-                .client(okHttpClient)
-                .addConverterFactory(ScalarsConverterFactory.create()).build();
-
-
-       /* if (retrofit==null) {
-            retrofit = new Retrofit.Builder()
-                    .baseUrl(BASE_URL)
-                    .client(clientBuilder.build())
-                    .addConverterFactory(ScalarsConverterFactory.create())
-                    .addConverterFactory(GsonConverterFactory.create())
-                    .build();
-        }*/
-    }
 
 
 
