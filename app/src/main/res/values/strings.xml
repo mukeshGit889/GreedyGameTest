@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">GreedyGameTest</string>
+    <string name="search_hint">Search Icons</string>
+    <string name="home">Home</string>
+    <string name="true_">Premium</string>
+    <string name="false_">Free</string>
+    <string name="unAvailable">UnAvailable</string>
+    <string name="website"><u>WebSite</u>.</string>
+    <string name="dnavailable">Downloading not available.</string>
+    <string name="readMe">ReadMe</string>
+    <string name="download">Download</string>
+    <string name="network">Check Network Connection</string>
+</resources>

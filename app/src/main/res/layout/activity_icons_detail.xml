@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="listener"
+            type="com.greedygametest.activities.IconsDetail.ClickListener" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".activities.IconsDetail">
+
+        <include
+            android:id="@+id/includeId"
+            layout="@layout/app_title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivIconId"
+            android:layout_width="@dimen/_220sdp"
+            android:layout_height="@dimen/_220sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:src="@drawable/logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/includeId" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvIsNameId"
+            style="@style/tvName"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivIconId" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvIsTypeId"
+            style="@style/tvType"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:textSize="@dimen/_14sdp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvIsNameId" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvWebSiteId"
+            style="@style/tvType"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:onClick="@{(view) -> listener.onClick(view)}"
+            android:text="@string/website"
+            android:textSize="@dimen/_16sdp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvLicenceId" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvFreeId"
+            style="@style/tvFree"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:background="@drawable/free_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvIsTypeId" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPriceId"
+            style="@style/tvPrice"
+            app:layout_constraintRight_toRightOf="@+id/tvFreeId"
+            app:layout_constraintTop_toBottomOf="@+id/tvFreeId" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvAutherNameId"
+            style="@style/tvAutherNames"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:onClick="@{(view) -> listener.onClick(view)}"
+            app:layout_constraintRight_toRightOf="@+id/tvPriceId"
+            app:layout_constraintTop_toBottomOf="@+id/tvPriceId" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLicenceId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            app:layout_constraintRight_toRightOf="@+id/tvPriceId"
+            app:layout_constraintTop_toBottomOf="@+id/tvAutherNameId" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDownloadId"
+            style="@style/tvFree"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:background="@drawable/free_background"
+            android:onClick="@{(view) -> listener.onClick(view)}"
+            android:paddingStart="@dimen/_5sdp"
+            android:paddingLeft="@dimen/_5sdp"
+            android:paddingEnd="@dimen/_5sdp"
+            android:paddingRight="@dimen/_5sdp"
+            android:text="@string/download"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvLicenceId" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvReadMeId"
+            style="@style/tvType"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:text="@string/readMe"
+            android:textSize="@dimen/_14sdp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvWebSiteId" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvReadMeDetailId"
+            style="@style/tvType"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="start"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvReadMeId" />
+
+
+        <ProgressBar
+            android:id="@+id/pbIconSetId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
