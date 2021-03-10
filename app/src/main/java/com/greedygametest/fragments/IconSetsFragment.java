@@ -61,7 +61,10 @@ public class IconSetsFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
         getPublicIconViewModle = ViewModelProviders.of(this).get(GetPublicIconViewModle.class);
+
+
         setupAdapter();
         if (Constants.isInternetConnected(getActivity())) {
             callPublicIconApi(Constants.HEADER, "20");
